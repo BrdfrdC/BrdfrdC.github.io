@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <title>Air Fryer Lemon Pepper Roasted Cashews</title>
+    <body>
+    <input type="search" id="recipe-search" placeholder="Search for a recipe">
+    <div id="search-results"></div>
+        <div class="recipe-info">
+            <div class="recipe-title">
+                <h1>Air Fryer Lemon Pepper Roasted Cashews</h1>
+            </div>
+                    <div class="recipe-times">
+                        <p> Prep Time: 3 mins </p>
+                        <p> Cook Time: 7 mins </p>
+                        <p> Total Time: 10 mins </p>
+                        <p> Servings: 4  </p>
+                    </div>
+                    <div id="ingredients-list">
+                        Ingredients:
+                        <ul class="ingredients">
+                            <li> 1 cup raw cashews </li>
+                            <li> 1 tablespoon olive oil </li>
+                            <li> ½ teaspoon lemon-pepper seasoning </li>
+                            <li> ½ teaspoon garlic powder </li>
+                            <li> ½ teaspoon salt </li>
+                        </ul>
+                    </div>
+                    <div class="instructions-list">
+                        Instructions:
+                        <ol class="instructions">
+                            <li>  Place raw cashews in a bowl. Add olive oil and toss to coat. Sprinkle with lemon pepper seasoning, garlic powder, and salt; toss to coat again.   </li>
+                            <li>  Preheat an air fryer to 330 degrees F (165 degrees C).   </li>
+                            <li>  Spread out seasoned cashews in the basket of the air fryer.   </li>
+                            <li>  Cook for 3 minutes. Shake the basket and cook until golden brown, about 4 more minutes.   </li>
+                            <li>  Transfer cashews to a paper towel lined plate and let cool completely. Store leftovers in an air-tight container.   </li>
+                        </ol>
+                    </div>
+        </div>
+        <script src="./script.js"></script>
+
+    <script>
+      const searchInput = document.getElementById("recipe-search");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("input", (event) => {
+        console.log("Input event fired");
+        const query = event.target.value;
+        console.log("Search query:", query);
+        const matchingRecipes = searchRecipes(query);
+        console.log("Matching recipes:", matchingRecipes);
+        const resultHtml = matchingRecipes
+          .map((recipe) => {
+            return `<a href="${recipe.fileName}">${recipe.recipeName}</a>`;
+          })
+          .join(" ");
+        searchResults.innerHTML = resultHtml;
+      });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+{
+    "Null": {
+        "fileName": "",
+        "recipeName": "",
+        "recipeURL": "",
+        "keywords": [
+            ""
+        ]
+    },
+    "airfryerwaffleegginahole": {
+        "fileName": "./allrecipes/AirFryerWaffleEgginaHole.html",
+        "recipeName": "Air Fryer Waffle Egg in a Hole",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Waffle",
+            "Egg",
+            "Hole"
+        ]
+    },
+    "airfryercaramelizedbananas": {
+        "fileName": "./allrecipes/AirFryerCaramelizedBananas.html",
+        "recipeName": "Air Fryer Caramelized Bananas ",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Caramelized",
+            "Bananas"
+        ]
+    },
+    "airfryerlemonpepperroastedcashews": {
+        "fileName": "./allrecipes/AirFryerLemonPepperRoastedCashews.html",
+        "recipeName": "Air Fryer Lemon Pepper Roasted Cashews",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Lemon",
+            "Pepper",
+            "Roasted",
+            "Cashews"
+        ]
+    },
+    "airfryerpretzelcrescentrolls": {
+        "fileName": "./allrecipes/AirFryerPretzelCrescentRolls.html",
+        "recipeName": "Air Fryer Pretzel Crescent Rolls",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Pretzel",
+            "Crescent",
+            "Rolls"
+        ]
+    },
+    "airfryercrispycajunblackeyedpeas": {
+        "fileName": "./allrecipes/AirFryerCrispyCajunBlackEyedPeas.html",
+        "recipeName": "Air Fryer Crispy Cajun Black-Eyed Peas",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Crispy",
+            "Cajun",
+            "Black-Eyed",
+            "Peas"
+        ]
+    },
+    "quickairfryertilapia": {
+        "fileName": "./allrecipes/QuickAirFryerTilapia.html",
+        "recipeName": "Quick Air Fryer Tilapia",
+        "recipeURL": "",
+        "keywords": [
+            "Quick",
+            "Air",
+            "Fryer",
+            "Tilapia"
+        ]
+    },
+    "airfryerchickpeas": {
+        "fileName": "./allrecipes/AirFryerChickpeas.html",
+        "recipeName": "Air Fryer Chickpeas",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Chickpeas"
+        ]
+    },
+    "airfryerloadedmashedpotatocakes": {
+        "fileName": "./allrecipes/AirFryerLoadedMashedPotatoCakes.html",
+        "recipeName": "Air Fryer Loaded Mashed Potato Cakes",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Loaded",
+            "Mashed",
+            "Potato",
+            "Cakes"
+        ]
+    },
+    "airfryerchickenbiteswithparmesancheese": {
+        "fileName": "./allrecipes/AirFryerChickenBiteswithParmesanCheese.html",
+        "recipeName": "Air Fryer Chicken Bites with Parmesan Cheese",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Chicken",
+            "Bites",
+            "Parmesan",
+            "Cheese"
+        ]
+    },
+    "airfryerminicroissantswithnutellaandjam": {
+        "fileName": "./allrecipes/AirFryerMiniCroissantswithNutellaandJam.html",
+        "recipeName": "Air Fryer Mini Croissants with Nutella and Jam",
+        "recipeURL": "",
+        "keywords": [
+            "Air",
+            "Fryer",
+            "Mini",
+            "Croissants",
+            "Nutella",
+            "Jam"
+        ]
+    }
+}

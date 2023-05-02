@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <title>Quick Air Fryer Tilapia</title>
+    <body>
+    <input type="search" id="recipe-search" placeholder="Search for a recipe">
+    <div id="search-results"></div>
+        <div class="recipe-info">
+            <div class="recipe-title">
+                <h1>Quick Air Fryer Tilapia</h1>
+            </div>
+                    <div class="recipe-times">
+                        <p> Prep Time: 10 mins </p>
+                        <p> Cook Time: 8 mins </p>
+                        <p> Total Time: 18 mins </p>
+                        <p> Servings: 4  </p>
+                    </div>
+                    <div id="ingredients-list">
+                        Ingredients:
+                        <ul class="ingredients">
+                            <li>   olive oil cooking spray </li>
+                            <li> 2 tablespoons all-purpose flour </li>
+                            <li> 1 ½ teaspoons seafood seasoning (such as Old Bay®) </li>
+                            <li> ¾ teaspoon paprika </li>
+                            <li> ½ teaspoon garlic powder </li>
+                            <li>   salt and freshly ground black pepper to taste </li>
+                            <li> 1 pound tilapia fillets, thawed if frozen </li>
+                            <li>   4 lemon slices </li>
+                        </ul>
+                    </div>
+                    <div class="instructions-list">
+                        Instructions:
+                        <ol class="instructions">
+                            <li>  Preheat an air fryer to 400 degrees F (200 degrees C). Spray the air fryer basket with olive oil spray or line with a parchment liner.   </li>
+                            <li>  Whisk flour, seafood seasoning, paprika, garlic powder, salt, and pepper together in a small bowl.   </li>
+                            <li>  Remove tilapia filets from the package and pat dry with a paper towel. Lightly spray filets with olive oil, and sprinkle flour seasoning over each filet, pressing down to coat all of the fish. Turn them over, and season on the other side as well. Place the filets into the air fryer basket, without overlapping, so air can circulate around the filets.   </li>
+                            <li>  Cook until tilapia filets flake easily with a fork, 7 to 10 minutes. There is no need to flip them. Depending on your air fryer size, you might have to cook them in batches.   </li>
+                            <li>  Top each filet with a slice of lemon, and serve hot.   </li>
+                        </ol>
+                    </div>
+        </div>
+        <script src="./script.js"></script>
+
+    <script>
+      const searchInput = document.getElementById("recipe-search");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("input", (event) => {
+        console.log("Input event fired");
+        const query = event.target.value;
+        console.log("Search query:", query);
+        const matchingRecipes = searchRecipes(query);
+        console.log("Matching recipes:", matchingRecipes);
+        const resultHtml = matchingRecipes
+          .map((recipe) => {
+            return `<a href="${recipe.fileName}">${recipe.recipeName}</a>`;
+          })
+          .join(" ");
+        searchResults.innerHTML = resultHtml;
+      });
+    </script>
+    </body>
+</html>

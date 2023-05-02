@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <title>Air Fryer Pretzel Crescent Rolls</title>
+    <body>
+    <input type="search" id="recipe-search" placeholder="Search for a recipe">
+    <div id="search-results"></div>
+        <div class="recipe-info">
+            <div class="recipe-title">
+                <h1>Air Fryer Pretzel Crescent Rolls</h1>
+            </div>
+                    <div class="recipe-times">
+                        <p> Prep Time: 5 mins </p>
+                        <p> Total Time: 5 mins </p>
+                        <p> Servings: 8  </p>
+                    </div>
+                    <div id="ingredients-list">
+                        Ingredients:
+                        <ul class="ingredients">
+                            <li> 1 quart water </li>
+                            <li> ¼ cup baking soda </li>
+                            <li> 1 (8 ounce) package refrigerated crescent roll dough </li>
+                            <li>   pretzel salt </li>
+                            <li>   cooking spray </li>
+                        </ul>
+                    </div>
+                    <div class="instructions-list">
+                        Instructions:
+                        <ol class="instructions">
+                            <li>  Place a large stock pot over high heat. Add water and bring to a boil over high heat.   </li>
+                            <li>  Meanwhile shape crescents into desired shape and preheat air fryer to 350°   </li>
+                            <li>  Preheat an air fryer to 350 degrees F (175 degrees C). Line the air fryer basket with a fitted piece of parchment. Generously spray with cooking spray.   </li>
+                            <li>  Once water is boiling, carefully add baking soda (it WILL bubble up!). Lower crescent rolls into the brine with a spider strainer; boil for 5 seconds. Transfer onto the parchment paper in the air fryer basket. Sprinkle with salt.   </li>
+                            <li>  Air fry until crescent rolls are cooked through and golden, about 12 minutes. Serve immediately.   </li>
+                        </ol>
+                    </div>
+        </div>
+        <script src="./script.js"></script>
+
+    <script>
+      const searchInput = document.getElementById("recipe-search");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("input", (event) => {
+        console.log("Input event fired");
+        const query = event.target.value;
+        console.log("Search query:", query);
+        const matchingRecipes = searchRecipes(query);
+        console.log("Matching recipes:", matchingRecipes);
+        const resultHtml = matchingRecipes
+          .map((recipe) => {
+            return `<a href="${recipe.fileName}">${recipe.recipeName}</a>`;
+          })
+          .join(" ");
+        searchResults.innerHTML = resultHtml;
+      });
+    </script>
+    </body>
+</html>

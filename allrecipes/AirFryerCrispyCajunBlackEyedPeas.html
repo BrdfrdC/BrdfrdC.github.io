@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <title>Air Fryer Crispy Cajun Black-Eyed Peas</title>
+    <body>
+    <input type="search" id="recipe-search" placeholder="Search for a recipe">
+    <div id="search-results"></div>
+        <div class="recipe-info">
+            <div class="recipe-title">
+                <h1>Air Fryer Crispy Cajun Black-Eyed Peas</h1>
+            </div>
+                    <div class="recipe-times">
+                        <p> Prep Time: 4 mins </p>
+                        <p> Cook Time: 14 mins </p>
+                        <p> Total Time: 18 mins </p>
+                        <p> Servings: 4  </p>
+                    </div>
+                    <div id="ingredients-list">
+                        Ingredients:
+                        <ul class="ingredients">
+                            <li> 1 (14.5 ounce) can black-eyed peas, rinsed and drained </li>
+                            <li> 1 tablespoon olive oil </li>
+                            <li> 1 ½ teaspoons Cajun seasoning (such as Old Bay®) </li>
+                        </ul>
+                    </div>
+                    <div class="instructions-list">
+                        Instructions:
+                        <ol class="instructions">
+                            <li>  Line a baking sheet with paper towels; spread drained peas out in an even layer, discarding shells and mushed peas. Pat dry with additional paper towels.   </li>
+                            <li>  Preheat an air fryer to 400 degrees Fahrenheit (200 degrees C) according to manufacturer's instructions.   </li>
+                            <li>  Whisk oil and Cajun seasoning in a bowl. Stir in peas until evenly coated.   </li>
+                            <li>  Place peas in the basket of the air fryer. Cook for 7 minutes. Shake the basket and cook 7 minutes more.   </li>
+                        </ol>
+                    </div>
+        </div>
+        <script src="./script.js"></script>
+
+    <script>
+      const searchInput = document.getElementById("recipe-search");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("input", (event) => {
+        console.log("Input event fired");
+        const query = event.target.value;
+        console.log("Search query:", query);
+        const matchingRecipes = searchRecipes(query);
+        console.log("Matching recipes:", matchingRecipes);
+        const resultHtml = matchingRecipes
+          .map((recipe) => {
+            return `<a href="${recipe.fileName}">${recipe.recipeName}</a>`;
+          })
+          .join(" ");
+        searchResults.innerHTML = resultHtml;
+      });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <title>Air Fryer Chickpeas</title>
+    <body>
+    <input type="search" id="recipe-search" placeholder="Search for a recipe">
+    <div id="search-results"></div>
+        <div class="recipe-info">
+            <div class="recipe-title">
+                <h1>Air Fryer Chickpeas</h1>
+            </div>
+                    <div class="recipe-times">
+                        <p> Prep Time: 10 mins </p>
+                        <p> Cook Time: 15 mins </p>
+                        <p> Total Time: 25 mins </p>
+                        <p> Servings: 4  </p>
+                    </div>
+                    <div id="ingredients-list">
+                        Ingredients:
+                        <ul class="ingredients">
+                            <li> 1 (15.5 ounce) can chickpeas, drained and rinsed </li>
+                            <li> ¾ tablespoon avocado oil </li>
+                            <li> 2 teaspoons chili-lime seasoning (such as Tajin®) </li>
+                            <li> ¼ teaspoon garlic powder </li>
+                            <li> 1 pinch cayenne pepper, or to taste </li>
+                            <li>   salt to taste </li>
+                        </ul>
+                    </div>
+                    <div class="instructions-list">
+                        Instructions:
+                        <ol class="instructions">
+                            <li>  Preheat air fryer to 400 degrees F (200 degrees C). Spray the air fryer basket with cooking spray or use a parchment liner.   </li>
+                            <li>  Place chickpeas on a paper towel-lined plate to dry, patting down with another paper towel on top. Add dried chickpeas to a medium bowl, drizzle with avocado oil, sprinkle with Tajin, garlic powder, and cayenne, and toss to coat.   </li>
+                            <li>  Transfer chickpeas to the air fryer basket, and cook, stirring or shaking halfway through, until you reach your desired crispness, 12 to 15 minutes. Cooking time may vary depending on the brand and size of your air fryer.   </li>
+                            <li>  Season with salt and allow chickpeas to cool slightly.   </li>
+                        </ol>
+                    </div>
+        </div>
+        <script src="./script.js"></script>
+
+    <script>
+      const searchInput = document.getElementById("recipe-search");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("input", (event) => {
+        console.log("Input event fired");
+        const query = event.target.value;
+        console.log("Search query:", query);
+        const matchingRecipes = searchRecipes(query);
+        console.log("Matching recipes:", matchingRecipes);
+        const resultHtml = matchingRecipes
+          .map((recipe) => {
+            return `<a href="${recipe.fileName}">${recipe.recipeName}</a>`;
+          })
+          .join(" ");
+        searchResults.innerHTML = resultHtml;
+      });
+    </script>
+    </body>
+</html>

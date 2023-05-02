@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <title>Air Fryer Caramelized Bananas </title>
+    <body>
+    <input type="search" id="recipe-search" placeholder="Search for a recipe">
+    <div id="search-results"></div>
+        <div class="recipe-info">
+            <div class="recipe-title">
+                <h1>Air Fryer Caramelized Bananas </h1>
+            </div>
+                    <div class="recipe-times">
+                        <p> Prep Time: 10 mins </p>
+                        <p> Cook Time: 10 mins </p>
+                        <p> Total Time: 20 mins </p>
+                        <p> Servings: 4  </p>
+                    </div>
+                    <div id="ingredients-list">
+                        Ingredients:
+                        <ul class="ingredients">
+                            <li> 2 large bananas, peeled and cut into 1/2 inch slices </li>
+                            <li> 1 tablespoon salted butter, melted </li>
+                            <li> 1/2 teaspoon vanilla extract </li>
+                            <li> 1 tablespoon brown sugar </li>
+                            <li> 1/2 teaspoon ground cinnamon </li>
+                        </ul>
+                    </div>
+                    <div class="instructions-list">
+                        Instructions:
+                        <ol class="instructions">
+                            <li>  Preheat air fryer to 390 degrees F (195 degrees C)   </li>
+                            <li>  Spread out banana slices on a plate. Combine butter and vanilla extract and drizzle over the bananas.   </li>
+                            <li>  Combine brown sugar and cinnamon. Sprinkle half of the sugar mixture over the slices, flip, and sprinkle the remaining sugar over the other side. Make sure both sides are well coated.   </li>
+                            <li>  Spray the air fryer basket with cooking spray or line with a parchment paper.   </li>
+                            <li>  Place banana slices in the air fryer basket in a single layermaking sure not to overcrowd or overlap. Cook until golden brown and caramelized to your liking, 7 to 9 minutes. You do not need to flip banana slices over.   </li>
+                            <li>  Remove bananas from the basket, cool slightly, and serve.     Cook's Notes:    Depending on the size of your air fryer you may need to fry bananas in batches.   Cooking time may vary depending on the size and brand of your air fryer. If you are only have unsalted butter, add a pinch of salt.   </li>
+                        </ol>
+                    </div>
+        </div>
+        <script src="./script.js"></script>
+
+    <script>
+      const searchInput = document.getElementById("recipe-search");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("input", (event) => {
+        console.log("Input event fired");
+        const query = event.target.value;
+        console.log("Search query:", query);
+        const matchingRecipes = searchRecipes(query);
+        console.log("Matching recipes:", matchingRecipes);
+        const resultHtml = matchingRecipes
+          .map((recipe) => {
+            return `<a href="${recipe.fileName}">${recipe.recipeName}</a>`;
+          })
+          .join(" ");
+        searchResults.innerHTML = resultHtml;
+      });
+    </script>
+    </body>
+</html>

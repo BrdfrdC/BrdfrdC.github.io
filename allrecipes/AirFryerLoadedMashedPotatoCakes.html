@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <title>Air Fryer Loaded Mashed Potato Cakes</title>
+    <body>
+    <input type="search" id="recipe-search" placeholder="Search for a recipe">
+    <div id="search-results"></div>
+        <div class="recipe-info">
+            <div class="recipe-title">
+                <h1>Air Fryer Loaded Mashed Potato Cakes</h1>
+            </div>
+                    <div class="recipe-times">
+                        <p> Prep Time: 10 mins </p>
+                        <p> Cook Time: 12 mins </p>
+                        <p> Freeze Time: 10 mins </p>
+                        <p> Total Time: 32 mins </p>
+                        <p> Servings: 6  </p>
+                        <p> Yield: 6 potato cakes </p>
+                    </div>
+                    <div id="ingredients-list">
+                        Ingredients:
+                        <ul class="ingredients">
+                            <li> 2 cups cold mashed potatoes </li>
+                            <li> 1 cup shredded Cheddar cheese </li>
+                            <li> 3  green onions, chopped </li>
+                            <li> ¼ cup real bacon bits </li>
+                            <li> 2 tablespoons all-purpose flour </li>
+                            <li> 1 small egg, beaten </li>
+                        </ul>
+                    </div>
+                    <div class="instructions-list">
+                        Instructions:
+                        <ol class="instructions">
+                            <li>  Combine mashed potatoes, Cheddar cheese, green onions, bacon bits, and flour in a bowl; stir until combined. Mix in beaten egg.   </li>
+                            <li>  Preheat air fryer to 400 degrees F (200 degrees C) for 10 minutes.   </li>
+                            <li>  Form mixture into 6 patties and set on a baking sheet. Place baking sheet in the freezer for 10 minutes while you preheat the air fryer.   </li>
+                            <li>  Place patties in the air fryer basket in batches, making sure to not overcrowd. Cook undisturbed for 12 minutes. Repeat with remaining patties.   </li>
+                        </ol>
+                    </div>
+        </div>
+        <script src="./script.js"></script>
+
+    <script>
+      const searchInput = document.getElementById("recipe-search");
+      const searchResults = document.getElementById("search-results");
+
+      searchInput.addEventListener("input", (event) => {
+        console.log("Input event fired");
+        const query = event.target.value;
+        console.log("Search query:", query);
+        const matchingRecipes = searchRecipes(query);
+        console.log("Matching recipes:", matchingRecipes);
+        const resultHtml = matchingRecipes
+          .map((recipe) => {
+            return `<a href="${recipe.fileName}">${recipe.recipeName}</a>`;
+          })
+          .join(" ");
+        searchResults.innerHTML = resultHtml;
+      });
+    </script>
+    </body>
+</html>
