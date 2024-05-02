@@ -1,18 +1,101 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<vue-particles
+    id="tsparticles"
+    @particles-loaded="particlesLoaded"
+    :options="{
+            background: {
+                color: {
+                    value: '#335791'
+                }
+            },
+            fpsLimit: 120,
+            interactivity: {
+                events: {
+                    onClick: {
+                        enable: false,
+                        mode: 'push'
+                    },
+                    onHover: {
+                        enable: true,
+                        mode: 'slow'
+                    },
+                },
+                modes: {
+                    bubble: {
+                        distance: 400,
+                        duration: 2,
+                        opacity: 0.8,
+                        size: 40
+                    },
+                    push: {
+                        quantity: 4
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    }
+                }
+            },
+            particles: {
+                color: {
+                    value: '#ffffff'
+                },
+                links: {
+                    color: '#ffffff',
+                    distance: 125,
+                    enable: true,
+                    opacity: 0.5,
+                    width: 1
+                },
+                move: {
+                    direction: 'none',
+                    enable: true,
+                    outModes: 'bounce',
+                    random: false,
+                    speed: 1,
+                    straight: false
+                },
+                number: {
+                    density: {
+                        enable: true,
+                    },
+                    value: 300
+                },
+                opacity: {
+                    value: 0.5
+                },
+                shape: {
+                    type: 'circle'
+                },
+                size: {
+                    value: { min: 1, max: 5 }
+                }
+            },
+            detectRetina: true
+        }"
+/>
+<div class="home-container">
+    <div class="title">BRADLEY CONSUEGRA</div>
+    <router-link to="/about">About</router-link>
+</div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+const particlesLoaded = async container => {
+    console.log("Particles container loaded", container);
+};
 </script>
+
+<style scoped>
+.home-container {
+    position: relative;
+    z-index: 10;
+}
+
+.title {
+    position: relative;
+    font-size: 5vw;
+    color: white;
+    font-family: 'Futura Medium';
+}
+</style>
