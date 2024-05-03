@@ -75,27 +75,110 @@
         }"
 />
 <div class="home-container">
-    <div class="title">BRADLEY CONSUEGRA</div>
-    <router-link to="/about">About</router-link>
+    <div class="wrapper" id="wrapper">
+        <router-link to="/about" class="about-title" name="subtitle">ABOUT</router-link>
+        <div class="home-row">
+            <router-link to="/projects" class="projects-title" name="subtitle">PROJECTS</router-link>
+            <div class="name-title">BRADLEY CONSUEGRA</div>
+            <router-link to="/contact" class="contact-title" name="subtitle">CONTACT ME</router-link>
+        </div>
+        <router-link to="/work-experience" class="experience-title" name="subtitle">WORK EXPERIENCE</router-link>
+    </div>
 </div>
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+
 const particlesLoaded = async container => {
     console.log("Particles container loaded", container);
 };
+
+onMounted(() => {
+    const subtitleElements = document.getElementsByName("subtitle");
+
+    subtitleElements.forEach((element) => {
+        element.addEventListener('mouseover', (e) => {
+            element.style.opacity = "100%";
+            element.style.transition = "0.3s";
+        });
+
+        element.addEventListener('mouseout', (e) => {
+            element.style.opacity = "20%";
+            element.style.transition = "0.3s";
+        });
+    })
+});
 </script>
 
 <style scoped>
 .home-container {
     position: relative;
     z-index: 10;
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
 }
 
-.title {
+.wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+}
+
+.home-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.name-title {
     position: relative;
     font-size: 5vw;
     color: white;
     font-family: 'Futura Medium';
+}
+
+.about-title {
+    position: relative;
+    font-size: 3vw;
+    color: white;
+    font-family: 'Futura Book';
+    opacity: 20%;
+}
+
+.projects-title {
+    position: relative;
+    font-size: 2.5vw;
+    color: white;
+    font-family: 'Futura Book';
+    opacity: 20%;
+}
+
+.experience-title {
+    position: relative;
+    font-size: 2.5vw;
+    color: white;
+    font-family: 'Futura Book';
+    opacity: 20%;
+}
+
+.contact-title {
+    position: relative;
+    font-size: 2.5vw;
+    color: white;
+    font-family: 'Futura Book';
+    opacity: 20%;
 }
 </style>
