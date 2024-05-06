@@ -1,5 +1,9 @@
 <template>
-  <router-view/>
+  <router-view v-slot="{Component}">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" :key="$route.path"></component>
+    </transition>
+  </router-view>
 </template>
 
 <style>
@@ -13,26 +17,40 @@
   src: url('./assets/fonts/futura medium bt.ttf');
 }
 
+body {
+  background-color: #335791;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #335791;
   z-index: 10;
   position: relative;
+  align-self: center;
 }
 
-nav {
-  padding: 30px;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.home-link {
+  position: relative;
+  color: white;
+  font-family: 'Futura Book';
+  font-size: 2vw;
 }
+
 </style>
