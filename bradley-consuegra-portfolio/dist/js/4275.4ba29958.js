@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[4275],{4275:function(e,o,r){async function t(e,o=!0){await e.addParticleUpdater("strokeColor",(async e=>{const{StrokeColorUpdater:o}=await Promise.all([r.e(5811),r.e(1711)]).then(r.bind(r,1711));return new o(e)}),o)}r.d(o,{loadStrokeColorUpdater:function(){return t}})}}]);
+//# sourceMappingURL=4275.4ba29958.js.map

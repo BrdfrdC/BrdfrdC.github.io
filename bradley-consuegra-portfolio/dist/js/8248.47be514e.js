@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[8248],{8248:function(e,a,n){async function o(e,a=!0){await e.addMover("base",(async()=>{const{BaseMover:e}=await Promise.all([n.e(5811),n.e(6327)]).then(n.bind(n,6327));return new e}),a)}n.d(a,{loadBaseMover:function(){return o}})}}]);
+//# sourceMappingURL=8248.47be514e.js.map
