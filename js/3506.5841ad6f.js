@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[3506],{3506:function(e,a,n){async function r(e,a=!0){const{SquareDrawer:r}=await n.e(1455).then(n.bind(n,1455));await e.addShape(["edge","square"],new r,a)}n.d(a,{loadSquareShape:function(){return r}})}}]);
+//# sourceMappingURL=3506.5841ad6f.js.map
