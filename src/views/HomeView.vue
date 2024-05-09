@@ -183,4 +183,76 @@ onMounted(() => {
     font-family: 'Futura Book';
     opacity: 20%;
 }
+
+@media screen and (max-width: 720px){
+    .home-container {
+        position: relative;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: space-between;
+    }
+
+    .wrapper {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        justify-content: space-around;
+    }
+
+    .home-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .name-title {
+        position: relative;
+        font-size: 10vw;
+        color: white;
+        font-family: 'Futura Medium';
+    }
+
+    .about-title {
+        position: relative;
+        font-size: 10vw;
+        color: white;
+        font-family: 'Futura Book';
+        opacity: 20%;
+    }
+
+    .projects-title {
+        position: relative;
+        font-size: 10vw;
+        color: white;
+        font-family: 'Futura Book';
+        opacity: 20%;
+    }
+
+    .experience-title {
+        position: relative;
+        font-size: 9vw;
+        color: white;
+        font-family: 'Futura Book';
+        opacity: 20%;
+    }
+
+    .contact-title {
+        position: relative;
+        font-size: 10vw;
+        color: white;
+        font-family: 'Futura Book';
+        opacity: 20%;
+    }
+}
 </style>

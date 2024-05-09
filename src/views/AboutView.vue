@@ -201,4 +201,69 @@ const particlesLoaded = async container => {
     font-size: 2vw;
 }
 
+@media screen and (max-width: 720px) {
+    .about-container-row {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+
+    .about-left {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        animation: slideFromLeft 1s ease-in-out;
+    }
+    .about-right {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        animation: slideFromRight 1s ease-in-out;
+    }
+
+    .about-title {
+        position: relative;
+        color: white;
+        font-family: 'Futura Medium';
+        font-size: 12vw;
+        margin: 0 0 0 0;
+    }
+
+    .about-item {
+        position: relative;
+        color: white;
+        font-family: 'Futura Book';
+        font-size: 5vw;
+    }
+
+    .skills-title {
+        position: relative;
+        color: white;
+        font-family: 'Futura Medium';
+        font-size: 6vw;
+    }
+
+    .skills-column-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .skills-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill {
+        position: relative;
+        color: white;
+        font-family: 'Futura Book';
+        font-size: 4vw;
+    }
+}
+
 </style>

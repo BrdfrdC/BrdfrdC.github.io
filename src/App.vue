@@ -53,4 +53,13 @@ body {
   font-size: 2vw;
 }
 
+@media screen and (max-width: 720px) {
+  .home-link {
+    position: relative;
+    color: white;
+    font-family: 'Futura Book';
+    font-size: 6vw;
+  }
+}
+
 </style>

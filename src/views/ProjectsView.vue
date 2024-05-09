@@ -126,12 +126,37 @@ onMounted(() => {
     let right;
     let down;
 
-    kmTitle.addEventListener("mouseover", (e) => {
-        left = document.getElementById('kmLeft');
-        right = document.getElementById('kmRight');
-        down = document.getElementById('kmDown');
-        over(left, right, down);
+    "mouseover touchstart".split(" ").forEach(function(e){
+        kmTitle.addEventListener(e, (ev) => {
+            left = document.getElementById('kmLeft');
+            right = document.getElementById('kmRight');
+            down = document.getElementById('kmDown');
+            over(left, right, down, e);
+        });
+
+        azureTitle.addEventListener(e, (ev) => {
+            left = document.getElementById('azureLeft');
+            right = document.getElementById('azureRight');
+            down = document.getElementById('azureDown');
+            over(left, right, down, e);
+        });
+
+        miniTitle.addEventListener(e, (ev) => {
+            left = document.getElementById('miniLeft');
+            right = document.getElementById('miniRight');
+            down = document.getElementById('miniDown');
+            over(left, right, down, e);
+        });
+
+        imdbTitle.addEventListener(e, (ev) => {
+            left = document.getElementById('imdbLeft');
+            right = document.getElementById('imdbRight');
+            down = document.getElementById('imdbDown');
+            over(left, right, down, e);
+        });
     });
+
+    
 
     kmTitle.addEventListener("mouseout", (e) => {
         left = document.getElementById('kmLeft');
@@ -139,37 +164,16 @@ onMounted(() => {
         out(left, right);
     });
 
-    azureTitle.addEventListener("mouseover", (e) => {
-        left = document.getElementById('azureLeft');
-        right = document.getElementById('azureRight');
-        down = document.getElementById('azureDown');
-        over(left, right, down);
-    });
-
     azureTitle.addEventListener("mouseout", (e) => {
         left = document.getElementById('azureLeft');
         right = document.getElementById('azureRight');
         out(left, right);
     });
-
-    miniTitle.addEventListener("mouseover", (e) => {
-        left = document.getElementById('miniLeft');
-        right = document.getElementById('miniRight');
-        down = document.getElementById('miniDown');
-        over(left, right, down);
-    });
-
+    
     miniTitle.addEventListener("mouseout", (e) => {
         left = document.getElementById('miniLeft');
         right = document.getElementById('miniRight');
         out(left, right);
-    });
-
-    imdbTitle.addEventListener("mouseover", (e) => {
-        left = document.getElementById('imdbLeft');
-        right = document.getElementById('imdbRight');
-        down = document.getElementById('imdbDown');
-        over(left, right, down);
     });
 
     imdbTitle.addEventListener("mouseout", (e) => {
@@ -178,19 +182,38 @@ onMounted(() => {
         out(left, right);
     });
 
-    function over(left, right, down) {
-        left.style.opacity = "100%";
-        left.style.left = "0%"
-        left.style.transition = "0.3s ease-in-out";
+    function over(left, right, down, eventType) {
+        switch(eventType) {
+            case "mouseover":
+                left.style.opacity = "100%";
+                left.style.left = "0%"
+                left.style.transition = "0.3s ease-in-out";
 
-        right.style.opacity = "100%";
-        right.style.right = "0%"
-        right.style.transition = "0.3s ease-in-out";
+                right.style.opacity = "100%";
+                right.style.right = "0%"
+                right.style.transition = "0.3s ease-in-out";
 
-        down.style.opacity = "100%";
-        down.style.bottom = "0%"
-        down.style.transition = "0.3s ease-in-out";
-        down.style.pointerEvents = "auto";
+                down.style.opacity = "100%";
+                down.style.bottom = "0%"
+                down.style.transition = "0.3s ease-in-out";
+                down.style.pointerEvents = "auto";
+                break;
+            
+            case "touchstart":
+                left.style.opacity = "60%";
+                left.style.top = "0%"
+                left.style.transition = "0.3s ease-in-out";
+
+                right.style.opacity = "60%";
+                right.style.top = "0%"
+                right.style.transition = "0.3s ease-in-out";
+
+                down.style.opacity = "90%";
+                down.style.bottom = "-10%"
+                down.style.transition = "0.3s ease-in-out";
+                down.style.pointerEvents = "auto";
+                break;
+        }
     }
 
     function out(left, right) {
@@ -263,6 +286,54 @@ onMounted(() => {
 .down{
     bottom: 50%;
     pointer-events: none;
+}
+
+@media screen and (max-width: 720px) {
+    .project-item-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .project-title {
+        position: relative;
+        color: white;
+        font-family: 'Futura Medium';
+        font-size: 8vw;
+        margin: 0 2vw 3vh 2vw;
+        z-index: 10;
+        cursor: pointer;
+        text-decoration-line: underline;
+    }
+
+    .project-text {
+        position: relative;
+        color: white;
+        font-family: 'Futura Book';
+        font-size: 3vw;
+        opacity: 0%;
+        margin: 0 0 0 0;
+    }
+
+    .left {
+        left: 0%;
+        top: 50%;
+        max-width: 80vw;
+    }
+
+    .right{
+        right: 0%;
+        top: -50%;
+        max-width: 80vw;
+    }
+
+    .down{
+        font-size: 4vw;
+        bottom: 50%;
+        pointer-events: none;
+    }
 }
 
 </style>
