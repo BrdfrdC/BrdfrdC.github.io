@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[6109],{6109:function(a,e,n){async function t(a,e=!0){const{StarDrawer:t}=await n.e(6272).then(n.bind(n,6272));await a.addShape("star",new t,e)}n.d(e,{loadStarShape:function(){return t}})}}]);
+//# sourceMappingURL=6109.fa2eb4a2.js.map

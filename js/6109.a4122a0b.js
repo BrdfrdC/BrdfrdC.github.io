@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[6109],{6109:function(a,e,n){async function r(a,e=!0){const{StarDrawer:r}=await Promise.all([n.e(5811),n.e(6272)]).then(n.bind(n,6272));await a.addShape("star",new r,e)}n.d(e,{loadStarShape:function(){return r}})}}]);
-//# sourceMappingURL=6109.a4122a0b.js.map

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[7599],{6165:function(n,o,e){e.d(o,{u:function(){return a}});const a=["emoji"]},7599:function(n,o,e){e.d(o,{loadEmojiShape:function(){return t}});var a=e(6165);async function t(n,o=!0){const{EmojiDrawer:t}=await e.e(6768).then(e.bind(e,4387));await n.addShape(a.u,new t,o)}}}]);
+//# sourceMappingURL=7599.3ebea712.js.map

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[9842],{9842:function(o,a,e){async function n(o,a=!0){await o.addParticleUpdater("color",(async o=>{const{ColorUpdater:a}=await e.e(3976).then(e.bind(e,3976));return new a(o)}),a)}e.d(a,{loadColorUpdater:function(){return n}})}}]);
+//# sourceMappingURL=9842.d346c9f8.js.map
