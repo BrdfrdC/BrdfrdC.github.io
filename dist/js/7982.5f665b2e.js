@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[7982],{7982:function(a,n,e){async function r(a,n=!0){await a.addMover("parallax",(async()=>{const{ParallaxMover:a}=await e.e(5790).then(e.bind(e,5790));return new a}),n)}e.d(n,{loadParallaxMover:function(){return r}})}}]);
+//# sourceMappingURL=7982.5f665b2e.js.map

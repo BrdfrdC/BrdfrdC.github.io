@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[1455],{1455:function(t,r,e){e.d(r,{SquareDrawer:function(){return a}});const n=2,o=Math.sqrt(n),s=2;function c(t){const{context:r,radius:e}=t,n=e/o,c=n*s;r.rect(-n,-n,c,c)}const u=4;class a{draw(t){c(t)}getSidesCount(){return u}}}}]);
-//# sourceMappingURL=1455.17abe4a2.js.map

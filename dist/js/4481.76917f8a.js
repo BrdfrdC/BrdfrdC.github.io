@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[4481],{4481:function(n,e,s){s.d(e,{LinksPlugin:function(){return t}});class t{constructor(){this.id="links"}async getPlugin(n){const{LinkInstance:e}=await s.e(6958).then(s.bind(s,6958));return new e(n)}loadOptions(){}needsPlugin(){return!0}}}}]);
+//# sourceMappingURL=4481.76917f8a.js.map

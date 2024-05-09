@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbradley_consuegra_portfolio"]=self["webpackChunkbradley_consuegra_portfolio"]||[]).push([[4631],{4631:function(e,a,n){async function t(e,a=!0){await e.addParticleUpdater("life",(async e=>{const{LifeUpdater:a}=await n.e(3091).then(n.bind(n,3091));return new a(e)}),a)}n.d(a,{loadLifeUpdater:function(){return t}})}}]);
+//# sourceMappingURL=4631.e22bbb34.js.map
