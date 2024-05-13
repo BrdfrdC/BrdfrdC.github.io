@@ -257,4 +257,54 @@ hr {
     100% {opacity: 100%; transform: translateX(0%);}
 }
 
+@media screen and (max-width: 720px) {
+    hr {
+        border-top: 3px solid white;
+        opacity: 80%;
+        width: 90vw;
+        border-radius: 5px;
+    }
+
+    .work-container {
+        height: fit-content;
+        margin: 2vh 0 2vh 0
+    }
+
+    .work-item-container {
+        flex-direction: column;
+    }
+
+    .work-left,
+    .work-right {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .work-role {
+        font-size: 8vw;
+    }
+
+    .work-company {
+        font-size: 6.5vw;
+    }
+
+    .work-location {
+        font-size: 6.5vw;
+    }
+    .work-period {
+        font-size: 5vw;
+    }
+
+    .work-list {
+        height: inherit;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work-list-item {
+        font-size: 4vw;
+    }
+}
+
 </style>

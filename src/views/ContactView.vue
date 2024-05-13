@@ -148,4 +148,39 @@ svg {
     fill: white;
 }
 
+@media screen and (max-width: 720px) {
+    .contact-container {
+        justify-content: center;
+    }
+
+    .email {
+        font-size: 6.5vw;
+        margin-bottom: 3vh;
+    }
+
+    .phone {
+        font-size: 9vw;
+    }
+
+    .contact-item-row {
+        width: 60vw;
+    }
+
+    .linkedin {
+        width: 150vw;
+        height: 50vw;
+    }
+
+    .github {
+        width: 150vw;
+        height: 50vw;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+}
+
 </style>

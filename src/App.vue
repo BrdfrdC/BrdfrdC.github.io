@@ -50,7 +50,7 @@ body {
   position: relative;
   color: white;
   font-family: 'Futura Book';
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 @media screen and (max-width: 720px) {
